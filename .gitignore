@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tailwind CSS
+dist/
+*.css.map
+
+# OS ve Editör Dosyaları
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Diğer Önbellek ve Yapı Dosyaları
+*.lock
+*.bak
