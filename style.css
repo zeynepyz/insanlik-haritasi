@@ -1,0 +1,117 @@
+* { 
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box; 
+  font-family: 'Arial', sans-serif; 
+} 
+
+html { 
+  scroll-behavior: smooth; 
+} 
+
+body { 
+  min-height: 100vh; 
+  background-color: #f0f8ff;  /* Açık mavi tonlu bir arka plan */
+  color: #003366;  /* Koyu mavi metin rengi */
+  text-align: left;  
+} 
+
+.header { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  padding: 15px 40px;  
+  background: #00509e;  /* Koyu mavi navbar */
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+} 
+
+.logo {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.menu a {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.giris-yap {
+  margin-left: auto; /* GİRİŞ YAP butonunu sağa yaslar */
+}
+
+.giris-yap a {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: #ff6b6b; /* Kırmızımsı bir giriş butonu */
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.menu a:hover, .giris-yap a:hover {
+  background: #003366;  /* Daha koyu mavi hover efekti */
+  border-radius: 5px;
+}
+
+/* İçerik Alanı */
+.inner-anasayfa {
+  padding-top: 100px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: #00509e;
+}
+
+p {
+  font-size: 18px;
+  color: #003366;
+}
+
+/* Küçük ekranlar için mobil uyum */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .navbar {
+      flex-direction: column;
+  }
+
+  .menu, .giris-yap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .giris-yap {
+      margin-left: 0;
+  }
+}
