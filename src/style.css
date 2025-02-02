@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-[#d4cfcf];
+}
+
+header {
+  @apply flex justify-center h-screen;
+}
+
+.sphere {
+  fill: #ffffff;
+}
+
+.card {
+  @apply absolute bg-white text-black p-4 rounded shadow-lg;
+  display: none;
+}
+
+path {
+  fill: #212797;
+  stroke: rgb(255, 255, 255);
+  transition: fill 0.3s ease;
+}
+
+path:hover {
+  fill: #25e91e;
+  cursor: pointer;
+}
