@@ -1,31 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  @apply bg-[#d4cfcf];
+.header {
+  display: flex;
+  justify-content: center;
 }
 
-header {
-  @apply flex justify-center h-screen;
-}
 
 .sphere {
   fill: #ffffff;
 }
 
 .card {
-  @apply absolute bg-white text-black p-4 rounded shadow-lg;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   display: none;
 }
 
-path {
-  fill: #212797;
-  stroke: rgb(255, 255, 255);
-  transition: fill 0.3s ease;
+#worldmap {
+  width: 60%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
-path:hover {
-  fill: #25e91e;
-  cursor: pointer;
-}
+object {
+  background-color: #f4efef;
+  margin: 20px auto;
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+} 
+
+html { 
+  scroll-behavior: smooth; 
+} 
