@@ -35,4 +35,41 @@ object {
 
 html { 
   scroll-behavior: smooth; 
-} 
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  background-color: white;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.navbar-brand {
+  font-weight: bold !important;
+  color: #9a9cea !important;
+}
+
+
+.nav-link {
+  font-size: 16px;
+  padding: 8px 16px !important;
+}
+
+.btn-primary {
+  padding: 8px 20px !important;
+  border-radius: 5px !important;
+  color: #567e81 !important;
+  background-color: #80afdf !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #6b9ed8 !important;
+  color: #9ee8ec !important;
+}
