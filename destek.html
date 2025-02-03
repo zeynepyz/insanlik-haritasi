@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destek Ol - İnsan Hakları Haritası</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">İnsanlık Haritası</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#stories">Hikayeler</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#contact">İletişim</a>
+              </li>
+            </ul>
+            <button class="btn btn-primary" onclick="window.location.href='share-story.html'">Hikayeni Paylaş</button>
+          </div>
+        </div>
+      </nav>
+
+    <div class="support-section">
+        <div class="container">
+            <h1>Nasıl Destek Olabilirsiniz?</h1>
+            <div class="support-options">
+                <div class="support-card">
+                    <i data-lucide="wallet"></i>
+                    <h2>Maddi Destek</h2>
+                    <p>Projemize maddi destek sağlayarak insan hakları çalışmalarımıza katkıda bulunabilirsiniz.</p>
+                    <div class="bank-details">
+                        <h3>Banka Hesap Bilgileri</h3>
+                        <p>Banka: X Bankası</p>
+                        <p>IBAN: TR00 0000 0000 0000 0000 0000 00</p>
+                    </div>
+                </div>
+                
+                <div class="support-card">
+                    <i data-lucide="share-2"></i>
+                    <h2>Sosyal Medyada Paylaş</h2>
+                    <p>Projemizi sosyal medyada paylaşarak daha fazla kişiye ulaşmamıza yardımcı olabilirsiniz.</p>
+                    <div class="share-buttons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://insanhaklariharitasi.org" target="_blank" class="share-button facebook">
+                            <i data-lucide="facebook"></i>
+                            Facebook'ta Paylaş
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?text=İnsan Hakları Haritası&url=https://insanhaklariharitasi.org" target="_blank" class="share-button twitter">
+                            <i data-lucide="twitter"></i>
+                            Twitter'da Paylaş
+                        </a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://insanhaklariharitasi.org" target="_blank" class="share-button linkedin">
+                            <i data-lucide="linkedin"></i>
+                            LinkedIn'de Paylaş
+                        </a>
+                        <a href="https://api.whatsapp.com/send?text=İnsan Hakları Haritası https://insanhaklariharitasi.org" target="_blank" class="share-button whatsapp">
+                            <i data-lucide="message-circle"></i>
+                            WhatsApp'ta Paylaş
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
