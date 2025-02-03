@@ -135,6 +135,39 @@ const countryPeople = {
   }
 };
 
+// Add smooth scrolling functionality
+document.addEventListener('DOMContentLoaded', () => {
+  // Get all nav links
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // Get the text content of the link
+      const linkText = e.target.textContent.trim();
+      
+      // Scroll to appropriate section based on link text
+      if (linkText === 'Anasayfa') {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      } else if (linkText === 'Hikayeler') {
+        const storiesSection = document.querySelector('.section');
+        if (storiesSection) {
+          storiesSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else if (linkText === 'İletişim') {
+        const contactSection = document.querySelector('.contact-section');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+});
+
 // SVG yüklendikten sonra çalışacak kod
 document.addEventListener("DOMContentLoaded", () => {
   // SVG nesnesini yüklendikten sonra işlem yapabilmek için
