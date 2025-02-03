@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     paths.forEach(path => {
       // Varsayılan rengi ayarla
-      path.style.fill = "pink";
+      path.style.fill = "#9A9CEA";
       path.style.stroke = "rgb(255, 255, 255)";
       
       // Mouse üzerine geldiğinde
       path.addEventListener("mouseenter", (event) => {
-        event.target.style.fill = "#e91e63";
+        event.target.style.fill = "#a2b9ee";
 
         // Card içeriğini değiştir ve görünür yap
         const country = event.target.getAttribute("title");
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       // Mouse ayrıldığında
       path.addEventListener("mouseleave", (event) => {
-        event.target.style.fill = "pink";
+        event.target.style.fill = "#9A9CEA";
         // Card'ı gizle
         card.style.display = "none";
       });
