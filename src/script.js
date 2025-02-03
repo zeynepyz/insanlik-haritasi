@@ -1,12 +1,17 @@
 // Dinamik card oluştur
 const card = document.createElement("div");
 card.style.position = "absolute";
-card.style.padding = "10px";
+card.style.justifyContent = "center";
+card.style.alignItems = "center";
+card.style.width = "auto";
+card.style.minWidth = "100px";
+card.style.maxWidth = "180px";
+card.style.padding = "12px";
 card.style.backgroundColor = "white";
-card.style.border = "1px solid black";
 card.style.borderRadius = "8px";
 card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
 card.style.display = "none";
+card.style.zIndex = "1000";
 document.body.appendChild(card);
 
 // Ülke kişileri için veri objesi
@@ -18,22 +23,19 @@ const countryPeople = {
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
   },
   "Canada": {
-    name: "Emma Thompson",
-    role: "Şef",
-    description: "Montreal'de kendi restoranını işletiyor, akçaağaç şuruplu tarifleriyle ünlü.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+    name: "Hannah",
+    description: "Hannah, Inuit halkının geleneksel bilgilerini genç nesillere aktarmak için çalışmalar yapan bir eğitimci.",
+    image: "https://img.freepik.com/premium-photo/woman-hiking-outdoors-women-mountains-young-nature-smile-lifestyle-canada-backpack-freedom-generative-ai_163305-246185.jpg"
   },
   "Turkey": {
-    name: "Mehmet Yılmaz",
-    role: "Çiftçi",
-    description: "Kapadokya'da organik tarım yapıyor, yerel restoranlara ürün tedarik ediyor.",
-    image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop"
+    name: "Meryem",
+    description: "Meryem, köyündeki kadınların ekonomik özgürlük kazanması için çalışmalar yapan bir girişimci.",
+    image: "https://img.freepik.com/premium-photo/radiant-beauty-turkish-women-grace-elegance-personified-ai-generated_744422-1237.jpg"
   },
   "Russia": {
-    name: "Natalia Petrova",
-    role: "Sanatçı",
-    description: "St. Petersburg'da sanat galerisi sahibi, geleneksel Rus sanatını yaşatıyor.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&h=150&fit=crop"
+    name: "Dmitry",
+    description: "Dmitry, yerli Sibirya halklarının haklarını savunan bir aktivist.",
+    image: "https://img.freepik.com/premium-photo/beauty-woman-face-portrait-beautiful-spa-model-girl-with-perfect-fresh-clean-skin-generated-by-ai_911060-3271.jpg"
   },
   "South Korea": {
     name: "Kim Min-jun",
@@ -42,16 +44,14 @@ const countryPeople = {
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
   },
   "Japan": {
-    name: "Yuki Tanaka",
-    role: "Öğretmen",
-    description: "Kyoto'da çay seremonisi ustası, geleneksel Japon kültürünü öğretiyor.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop"
+    name: "Hiroshi",
+    description: "Hiroshi, teknoloji ve yapay zeka kullanarak yaşlıların hayatını kolaylaştırmak için projeler geliştiren bir mühendis.",
+    image: "https://st3.depositphotos.com/20563840/37073/i/450/depositphotos_370738344-stock-photo-japanese-male-businessman-smiling-wearing.jpg"
   },
   "Italy": {
-    name: "Marco Rossi",
-    role: "Şef",
-    description: "Toskana'da şarap üreticisi, aileden gelen tarifleriyle şarap yapıyor.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop"
+    name: "Antonio",
+    description: "Antonio, göçmen hakları için mücadele eden bir avukat.",
+    image: "https://cdn.pixabay.com/photo/2023/02/24/00/41/ai-generated-7809880_640.jpg"
   },
   "Mexico": {
     name: "Isabella Garcia",
@@ -66,10 +66,9 @@ const countryPeople = {
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop"
   },
   "Brazil": {
-    name: "Ana Silva",
-    role: "Organik Tarım Projesi Yöneticisi",
-    description: "Amazon'da sürdürülebilir tarım projesi yürütüyor, yerel toplulukları destekliyor.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop"
+    name: "Miquel",
+    description: "Miguel, Amazon ormanlarını korumaya çalışan bir aktivist.",
+    image: "./assets/images/miquel.jpg"
   },
   "France": {
     name: "Pierre Dubois",
@@ -93,12 +92,6 @@ const countryPeople = {
     name: "Carmen Rodriguez",
     role: "Tapas Barı Sahibi",
     description: "Barcelona'da tapas barı sahibi, yerel malzemelerle özgün tarifler yaratıyor.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop"
-  },
-  "Greece": {
-    name: "Andreas Papadopoulos",
-    role: "Zeytin Üreticisi",
-    description: "Girit'te zeytin üreticisi, geleneksel Yunan mutfağını tanıtıyor.",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop"
   },
   "Vietnam": {
@@ -126,10 +119,19 @@ const countryPeople = {
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop"
   },
   "Germany": {
-    name: "Hannah Weber",
-    role: "Bira Bahçesi İşletmecisi",
-    description: "Münih'te bira bahçesi işletmecisi, geleneksel Bavyera mutfağını yaşatıyor.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop"
+    name: "Anna",
+    description: "Anna, iklim değişikliğiyle mücadele eden genç bir bilim insanı.",
+    image: "https://cdn.pixabay.com/photo/2023/02/24/00/42/ai-generated-7809882_1280.jpg"
+  },
+  "Australia": {
+    name: "Lily",
+    description: "Lily, iklim değişikliğiyle mücadele etmeye çalışan genç bir bilim insanı.",
+    image: "https://cdn.pixabay.com/photo/2023/02/24/00/42/ai-generated-7809882_1280.jpg"
+  },
+  "Kenya": {
+    name: "Nanjala",
+    description: "Nanjala, kuraklık nedeniyle suya ulaşmakta zorlanan köyü için mücadele eden genç bir kadın.",
+    image: "https://img.freepik.com/premium-photo/african-female-teacher-school-generative-ai_446633-129880.jpg"
   }
 };
 
@@ -147,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     paths.forEach(path => {
       const country = path.getAttribute("title");
+      
       // Varsayılan stil
       path.style.fill = "#9A9CEA"; // Varsayılan renk (açık gri)
       path.style.stroke = "rgb(255, 255, 255)";
@@ -163,20 +166,29 @@ document.addEventListener("DOMContentLoaded", () => {
           const person = countryPeople[country];
               card.innerHTML = `
                 <div class="flex gap-4">
-                  <img 
-                    src="${person.image}" 
-                    alt="${person.name}"
-                    class="w-16 h-16 rounded-full object-cover"
-                  />
-                  <div class="flex-1">
-                    <h3 class="font-semibold text-gray-900">${person.name}</h3>
-                    <p class="text-sm text-gray-600 mb-2">${country}</p>
-                  </div>
-                  <p class="text-sm text-gray-700">${person.description}</p>
-                </div>
+      <img 
+        src="${person.image}" 
+        alt="${person.name}"
+        style="
+          width: 150px;
+          height: 150px;
+          border-radius: 150px;
+          object-fit: cover;
+          flex-shrink: 0;
+        "
+      />
+      <div>
+        <div class="flex items-center gap-2">
+          <h3 style="color: #9A9CEA; font-weight: 500;">${person.name}</h3>
+          <span style="font-weight: 700; font-size: 0.875rem;">${country}</span>
+        </div>
+        <p class="text-sm text-gray-700 mt-2">${person.description}</p>
+      </div>
+    </div>
               `;
               card.style.display = "block";
-            });
+
+        });
         
         // Mouse hareket ederken
         path.addEventListener("mousemove", (event) => {
