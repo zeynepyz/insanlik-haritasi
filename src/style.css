@@ -1,26 +1,13 @@
-.header {
+header {
   display: flex;
   justify-content: center;
+  background-color: #f4efef;
+  margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
-
 
 .sphere {
   fill: #ffffff;
-}
-
-.card {
-  position: absolute;
-  background-color: white;
-  color: black;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  display: none;
-  min-width: 200px;
-  max-width: 300px;
-  border: 1px solid #e5e7eb;
-  font-family: Arial, sans-serif;
-  z-index: 1001;
 }
 
 @media (max-width: 768px) {
@@ -42,7 +29,6 @@ object {
   background-color: #f4efef;
   margin: 20px auto;
   width: 100%;
-  padding: 30px;
   border-radius: 10px;
 } 
 
@@ -85,4 +71,28 @@ body {
 .btn-primary:hover {
   background-color: #6b9ed8 !important;
   color: #9ee8ec !important;
+}
+
+
+.card {
+  box-shadow: 0 0 10px #a2b9ee;
+  width: 18rem; 
+  height: 100%;
+  border-color: #9a9cea; 
+  border-width: 2px;
+  display: flex;
+  flex-direction: column;
+}
+.card-img-top {
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
+}
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+p{
+flex-grow:1;
 }
