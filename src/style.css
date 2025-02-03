@@ -310,3 +310,119 @@ footer {
       grid-template-columns: 1fr;
   }
 }
+
+/* Form specific styles */
+.card {
+  border: none;
+  width: 100%;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.card-body {
+  padding: 2.5rem !important;
+}
+
+.form-label {
+  color: #567e81;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+  border: 2px solid #e1e5f2;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #9A9CEA;
+  box-shadow: 0 0 0 0.2rem rgba(154, 156, 234, 0.25);
+}
+
+.form-check-input {
+  border-color: #9A9CEA;
+}
+
+.form-check-input:checked {
+  background-color: #9A9CEA;
+  border-color: #9A9CEA;
+}
+
+.form-check-label {
+  color: #567e81;
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #9A9CEA, #A2B9EE);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(154, 156, 234, 0.3);
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #9A9CEA !important;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: #567e81 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #9A9CEA !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1.5rem !important;
+  }
+  
+  .row > .col {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Additional form enhancements */
+.form-select {
+  background-color: white;
+  cursor: pointer;
+}
+
+.form-select:hover {
+  border-color: #9A9CEA;
+}
+
+.form-check {
+  margin-right: 1.5rem;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(154, 156, 234, 0.25);
+}
